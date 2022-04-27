@@ -3,6 +3,7 @@ package com.udacity.asteroidradar.main
 import android.app.Application
 import androidx.lifecycle.*
 import com.udacity.asteroidradar.Asteroid
+import com.udacity.asteroidradar.BuildConfig
 import com.udacity.asteroidradar.Constants
 import com.udacity.asteroidradar.Database.getDatabase
 import com.udacity.asteroidradar.ImageOfTheDay
@@ -12,8 +13,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.*
-
-private const val apiKey = "yv0JbswidOGtrb0Pvp8weF9xmyDefpXlWKO6rnLJ"
 
 enum class AsteroidFilter { SHOW_TODAY, SHOW_SAVED, SHOW_WEEK }
 
@@ -62,11 +61,11 @@ class MainViewModel(private val application: Application) : ViewModel() {
     private suspend fun refreshAsteroidData() {
         val startTime = getCurrentDate()
         val endTime = getOffsetDate(7)
-        repository.refreshAsteroidData(apiKey, startTime, endTime)
+        repository.refreshAsteroidData(BuildConfig.NASA_API_KEY, startTime, endTime)
     }
 
     private suspend fun refreshImageOfTheDay() {
-        repository.refreshImageOfTheDay(apiKey)
+        repository.refreshImageOfTheDay(BuildConfig.NASA_API_KEY)
     }
 }
 

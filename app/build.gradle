@@ -7,6 +7,9 @@ apply plugin: 'kotlin-parcelize'
 
 android {
     compileSdkVersion 31
+    buildTypes.each {
+        it.buildConfigField 'String', 'NASA_API_KEY', 'nasaApiKey'
+    }
     defaultConfig {
         applicationId "com.udacity.asteroidradar"
         minSdkVersion 24
@@ -21,6 +24,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     buildFeatures {
         dataBinding true
     }

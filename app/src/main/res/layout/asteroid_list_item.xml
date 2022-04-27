@@ -66,7 +66,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/name_text"
             app:layout_constraintTop_toTopOf="@id/name_text"
-            tools:src="@drawable/ic_status_potentially_hazardous" />
+            tools:src="@drawable/ic_status_potentially_hazardous"
+            android:contentDescription="potentially hazardous asteroid indicator image"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
