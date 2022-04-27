@@ -2,12 +2,15 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/show_all_menu"
-        android:title="@string/next_week_asteroids" />
+        android:id="@+id/show_week_menu"
+        android:title="@string/next_week_asteroids"
+        android:contentDescription="view week asteroid filter"/>
     <item
-        android:id="@+id/show_rent_menu"
-        android:title="@string/today_asteroids" />
+        android:id="@+id/show_today_menu"
+        android:title="@string/today_asteroids"
+        android:contentDescription="view today asteroid filter"/>
     <item
-        android:id="@+id/show_buy_menu"
-        android:title="@string/saved_asteroids" />
+        android:id="@+id/show_saved_menu"
+        android:title="@string/saved_asteroids"
+        android:contentDescription="view saved asteroids"/>
 </menu>

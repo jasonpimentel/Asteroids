@@ -53,7 +53,7 @@ fun parseImageOfTheDayJsonResult(jsonResult: JSONObject): ImageOfTheDay{
     val title =  jsonResult.getString("title")
     val url =  jsonResult.getString("url")
 
-    return ImageOfTheDay(date, explanation, hdurl, mediaType,serviceVersion, title, url)
+    return ImageOfTheDay(0, date, explanation, hdurl, mediaType,serviceVersion, title, url)
 
 }
 
